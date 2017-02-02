@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<programmeList>
+    <programme id="1">
+        <name>Bruce Almighty</name>
+        <image>images/bruce_almighty.jpg</image>
+        <mood>Happy</mood>
+    </programme>
+    <programme id="2">
+        <name>School of Rock</name>
+        <image>images/school_of_rock.jpg</image>
+        <mood>Happy</mood>
+    </programme>
+    <programme id="3">
+        <name>Ted</name>
+        <image>images/ted.jpg</image>
+        <mood>Happy</mood>
+    </programme>
+    <programme id="4">
+        <name>The Intern</name>
+        <image>images/the_intern.jpg</image>
+        <mood>Happy</mood>
+    </programme>
+    <programme id="5">
+        <name>Big</name>
+        <image>images/big.jpg</image>
+        <mood>Happy</mood>
+    </programme>
+
+    <programme id="6">
+       <name>Avatar</name>
+        <image>images/avatar.jpg</image>
+        <mood>Fearless</mood>
+    </programme>
+    <programme id="7">
+        <name>Captain America: Civil War</name>
+        <image>images/captain_america.jpg</image>
+        <mood>Fearless</mood>
+    </programme>
+    <programme id="8">
+        <name>Rogue One</name>
+        <image>images/rogue_one.jpg</image>
+        <mood>Fearless</mood>
+    </programme>
+    <programme id="9">
+        <name>Suicide Squad</name>
+        <image>images/suicide_squad.jpg</image>
+        <mood>Fearless</mood>
+    </programme>
+    <programme id="10">
+        <name>Jason Bourne</name>
+        <image>images/jason_bourne.jpg</image>
+        <mood>Fearless</mood>
+    </programme>
+
+    <programme id="11">
+        <name>Titanic</name>
+        <image>images/titanic.jpg</image>
+        <mood>Sad</mood>
+    </programme>
+    <programme id="12">
+        <name>Marley and Me</name>
+        <image>images/marley_and_me.jpg</image>
+        <mood>Sad</mood>
+    </programme>
+    <programme id="13">
+        <name>Schinlders List</name>
+        <image>images/schindlers_list.jpg</image>
+        <mood>Sad</mood>
+    </programme>
+    <programme id="14">
+        <name>Terms of Endearment</name>
+        <image>images/terms_of_endearment.jpg</image>
+        <mood>Sad</mood>
+    </programme>
+    <programme id="15">
+        <name>My Girl</name>
+        <image>images/my_girl.jpg</image>
+        <mood>Sad</mood>
+    </programme>
+
+    <programme id="16">
+        <name>The Exorcist</name>
+        <image>images/the_exorcist.jpg</image>
+        <mood>Scary</mood>
+    </programme>
+    <programme id="17">
+        <name>The Shining</name>
+        <image>images/the_shining.jpg</image>
+        <mood>Scary</mood>
+    </programme>
+    <programme id="18">
+        <name>Paranormal Activity</name>
+        <image>images/paranormal_activity.jpg</image>
+        <mood>Scary</mood>
+    </programme>
+    <programme id="19">
+        <name>The Blair Witch Project</name>
+        <image>images/the_blair_witch_project.jpg</image>
+        <mood>Scary</mood>
+    </programme>
+    <programme id="20">
+        <name>Psycho</name>
+        <image>images/psycho.jpg</image>
+        <mood>Scary</mood>
+    </programme>
+
+    <programme id="21">
+        <name>Seven</name>
+        <image>images/seven.jpg</image>
+        <mood>Agitated</mood>
+    </programme>
+    <programme id="22">
+        <name>The Silence of the Lambs</name>
+        <image>images/the_silence_of_the_lambs.jpg</image>
+        <mood>Agitated</mood>
+    </programme>
+    <programme id="23">
+        <name>Memento</name>
+        <image>images/memento.jpg</image>
+        <mood>Agitated</mood>
+    </programme>
+    <programme id="24">
+        <name>Shutter Island</name>
+        <image>images/shutter_island.jpg</image>
+        <mood>Agitated</mood>
+    </programme>
+    <programme id="25">
+        <name>The Sixth Sense</name>
+        <image>images/the_sixth_sense.jpg</image>
+        <mood>Agitated</mood>
+    </programme>
+
+    <programme id="26">
+        <name>Toy Story</name>
+        <image>images/toy_story.jpg</image>
+        <mood>Tired</mood>
+    </programme>
+    <programme id="27">
+        <name>The Lego Movie</name>
+        <image>images/the_lego_movie.jpg</image>
+        <mood>Tired</mood>
+    </programme>
+    <programme id="28">
+        <name>ET The Extra Terrestrial</name>
+        <image>images/et_the_extra_terrestrial.jpg</image>
+        <mood>Tired</mood>
+    </programme>
+    <programme id="29">
+        <name>Finding Nemo</name>
+        <image>images/finding_nemo.jpg</image>
+        <mood>Tired</mood>
+    </programme>
+    <programme id="30">
+        <name>The Wizard of Oz</name>
+        <image>images/the_wizard_of_oz.jpg</image>
+        <mood>Tired</mood>
+    </programme>
+
+    <programme id="31">
+        <name>Frozen</name>
+        <image>images/frozen.jpg</image>
+        <mood>Calm</mood>
+    </programme>
+    <programme id="32">
+        <name>The Lion King</name>
+        <image>images/the_lion_king.jpg</image>
+        <mood>Calm</mood>
+    </programme>
+    <programme id="33">
+        <name>The Incredibles</name>
+        <image>images/the_incredibles.jpg</image>
+        <mood>Calm</mood>
+    </programme>
+    <programme id="34">
+        <name>Finding Dory</name>
+        <image>images/finding_dory.jpg</image>
+        <mood>Calm</mood>
+    </programme>
+    <programme id="35">
+        <name>How To Train Your Dragon</name>
+        <image>images/how_to_train_your_dragon.jpg</image>
+        <mood>Calm</mood>
+    </programme>
+
+    <programme id="36">
+        <name>Inception</name>
+        <image>images/inception.jpg</image>
+        <mood>Wide Awake</mood>
+    </programme>
+    <programme id="37">
+        <name>The Matrix</name>
+        <image>images/the_matrix.jpg</image>
+        <mood>Wide Awake</mood>
+    </programme>
+    <programme id="38">
+        <name>Intersteller</name>
+        <image>images/intersteller.jpg</image>
+        <mood>Wide Awake</mood>
+    </programme>
+    <programme id="39">
+        <name>Alien</name>
+        <image>images/alien.jpg</image>
+        <mood>Wide Awake</mood>
+    </programme>
+    <programme id="40">
+        <name>The Prestige</name>
+        <image>images/the_prestige.jpg</image>
+        <mood>Wide Awake</mood>
+    </programme>
+</programmeList>

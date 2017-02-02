@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sky Moodslider</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.1/css/bootstrap-slider.css">
+
+    <style>
+        .navbar-brand {
+            padding: 0px;
+        }
+
+        .navbar-brand > img {
+            height: 100%;
+            padding: 15px;
+            width: auto;
+        }
+    </style>
+
+</head>
+<body>
+<br/>
+<div class="container">
+    <nav class="navbar navbar-default" style="background-color: #ffffff; border-style: solid; border-color: #6f31a0">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    {% load static %}
+                    <img src="{% static "images/sky-logo.jpg" %}" alt="Sky Logo" class="img-rounded"/>
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{% url 'index' %}">Moodslider</a></li>
+                    <li><a href="{% url 'file_upload' %}">Upload Content</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron" style="background-color: #ffffff; border-style: solid; border-color: #6f31a0">
+
+        <div class="row">
+            <div class="col-md-2" style="text-align: center">Agitated</div>
+            <div class="col-md-8"><input id="one" class="sliders" type="text" style="width:100%"
+                                         data-slider-tooltip="hide"/><br/></div>
+            <div class="col-md-2" style="text-align: center">Calm</div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-2" style="text-align: center">Happy</div>
+            <div class="col-md-8"><input class="sliders" id="two" type="text" style="width:100%"
+                                         data-slider-tooltip="hide"/><br/></div>
+            <div class="col-md-2" style="text-align: center">Sad</div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-2" style="text-align: center">Tired</div>
+            <div class="col-md-8"><input class="sliders" type="text" id="three" style="width:100%"
+                                         data-slider-tooltip="hide"/><br/></div>
+            <div class="col-md-2" style="text-align: center">Wide Awake</div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-2" style="text-align: center">Scared</div>
+            <div class="col-md-8"><input class="sliders" type="text" id="four" style="width:100%"
+                                         data-slider-tooltip="hide"/><br/></div>
+            <div class="col-md-2" style="text-align: center">Fearless</div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div id="suggestions">
+                {% if content == 'no-content' %}
+                    {% for i in "xxxxx" %}
+                        <div class="col-md-2">
+                            <div class="row" style="width:100%; border: 2px #6f31a0 solid;">
+                                <p style="text-align: center">No content</p>
+                            </div>
+                            <br/>
+                            <div class="row" style="width:100%; border: 2px #6f31a0 solid;">
+                                <p style="text-align: center">No content</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {% for prog in content|slice:":5" %}
+                        <div class="col-md-2">
+                            <div class="row" style="width: 100%">
+                                {% load static %}
+                                <img src="{% static "" %}{{ prog.image }}" alt="No content" class="img-rounded"
+                                     style="max-width: 100%; max-height: 100%"/>
+                            </div>
+                            <div class="row">
+                                <p>{{ prog.name }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.1/bootstrap-slider.js"></script>
+
+<script type="application/javascript">
+    $(".sliders").slider({min: 0, max: 2, value: 1, focus: false});
+
+    $(".sliders").on("slideStop", function (slideEvt) {
+        $(".sliders").not(this).each(function() {
+           $(this).slider({min: 0, max: 2, value: 1, focus: false});
+           $(this).slider('refresh');
+        });
+        ajax_request(slideEvt, $(this).attr('id'));
+    });
+
+    function ajax_request(event, slide_id) {
+        $.ajax({
+            url: '/ajax/process_mood/',
+            data: {
+                'mood': event.value,
+                'slider_id': slide_id
+            },
+            dataType: 'html',
+            success: function (data) {
+                $('#suggestions').html(data);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
