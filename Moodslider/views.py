@@ -5,22 +5,31 @@ from .models import Programme
 
 from xml.dom import minidom
 
-
+'''
+Index function in order to parse the html for the
+landing page.
+'''
 def index(request):
     data = Programme.objects.all()
-    if data:
+    if data:  # if there is data in the database
         return render(request, 'index.html', {'content': data})
     else:
         return render(request, 'index.html', {'content': 'no-content'})
 
+'''
+Function present and parse the file upload form
+on the file-upload html file.
+'''
 def file_upload(request):
-    if request.method == 'POST':
+    if request.method == 'POST':  # if a POST has been passed from the front end
         form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
+        if form.is_valid():  # if the content of the form meets what is expected
             file = request.FILES['file']
             xml_file = minidom.parse(file)
             prog_list = xml_file.getElementsByTagName("programme")
             objs = []
+
+            # iterate over the entire contents and append the objects
             for prog in prog_list:
                 pid = prog.getAttribute('id')
                 name = prog.getElementsByTagName('name')[0].firstChild.data
@@ -34,6 +43,7 @@ def file_upload(request):
                     mood=mood)
                 )
 
+            # batch commit for a performance increase
             Programme.objects.bulk_create(objs)
             return render(request, 'index.html', {'content': objs})
     else:
@@ -42,6 +52,9 @@ def file_upload(request):
     return render(request, 'file-upload.html', {'form': form})
 
 
+'''
+Process the mood of the user.
+'''
 def process_mood(request):
     mood = request.GET.get('mood')
     slider_id = request.GET.get('slider_id')

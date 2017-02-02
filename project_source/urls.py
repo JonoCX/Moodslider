@@ -19,6 +19,9 @@ from Moodslider import views
 from django.conf.urls.static import static
 from django.conf import settings
 
+"""
+These are the URL patterns that are used on the website.
+"""
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
